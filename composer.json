@@ -1,7 +1,7 @@
 {
     "name": "udokmeci/yii2-phone-validator",
     "type": "validator",
-    "description": "Yii2 Phone validator wrapper on top of PhoneNumberUtil library also used by Android devices",
+    "description": "Yii2 Phone validator wrapper on top of PhoneNumberUtil library also used by Android devices. This is a fork of https://github.com/udokmeci/yii2-phone-validator with an update to the giggsey/libphonenumber-for-php version",
     "keywords": ["phone number","phone number validator","yii2"],
     "homepage": "https://github.com/udokmeci/yii2-beanstalk",
     "license": "MIT",
@@ -10,17 +10,23 @@
             "name": "Uğur DÖKMECİ",
             "email": "ugurdokmeci@gmail.com",
             "homepage": "https://github.com/udokmeci/yii2-phone-validator",
-            "role": "Developer"
+            "role": "Original Developer"
+        },
+        {
+            "name": "Michael Kubler",
+            "email": "kublermdk@gmail.com",
+            "homepage": "https://github.com/kublermdk/yii2-phone-validator",
+            "role": "Developer (Forked Update)"
         }
     ],
     "support": {
-        "email": "ugurdokmeci@gmail.com",
-        "source": "https://github.com/udokmeci/yii2-phone-validator"
+        "email": "kublermdk@gmail.com",
+        "source": "https://github.com/kublermdk/yii2-phone-validator"
     },
     "require": {
         "php": ">=5.3.0",
         "yiisoft/yii2": "*",
-        "giggsey/libphonenumber-for-php": "~7.0"
+        "giggsey/libphonenumber-for-php": "^8"
     },
     "autoload": {
         "psr-0" : {
