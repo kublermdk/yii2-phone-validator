@@ -30,7 +30,7 @@
     },
     "autoload": {
         "psr-0" : {
-            "udokmeci\\yii2PhoneValidator" : "src"
+            "kublermdk\\yii2PhoneValidator" : "src"
         }
     },
     "extra": {
