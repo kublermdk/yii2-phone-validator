@@ -1,7 +1,13 @@
 yii2-phone-validator
 ==============
 
+
+This is a very slightly modified version of https://github.com/udokmeci/yii2-phone-validator but with the latest giggsey/libphonenumber-for-php as of Q2 2022
+
+We even keep the same class name, so this should be a drop in replacement.
+
 Yii2 phone validator is a validator uses phone number util to validate and format the phone number attribute of model.
+
 
 
 How to use?
@@ -11,7 +17,7 @@ Just add the line under `require` object in your `composer.json` file.
 ``` json
 {
   "require": {
-    "udokmeci/yii2-phone-validator" : "~1.0.3"
+    "kublermdk/yii2-phone-validator" : "~1.0.4"
   }
 }
 ```
