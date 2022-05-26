@@ -1,12 +1,17 @@
 yii2-phone-validator
 ==============
 
-
-This is a very slightly modified version of https://github.com/udokmeci/yii2-phone-validator but with the latest giggsey/libphonenumber-for-php as of Q2 2022
-
-We even keep the same class name, so this should be a drop in replacement.
-
 Yii2 phone validator is a validator uses phone number util to validate and format the phone number attribute of model.
+
+> This is a very slightly modified version of https://github.com/udokmeci/yii2-phone-validator but with the latest giggsey/libphonenumber-for-php
+>
+> Created Q2 2022 and the whole reason is to add >= in the requires line for the composer.json i.e `"giggsey/libphonenumber-for-php": ">=8.0"`
+>
+> This means there's support for newer phone numbers as giggsey/libphonenumber-for-php is up to v8.12.48 as for 2022-05-26th whilst the original udokmeci/yii2-phone-validator was stuck on v7
+
+
+
+Note: You'll want to change from `udokmeci\yii2-phone-validator` to `kublermdk\yii2PhoneValidator` if you were using the old one.
 
 
 
@@ -14,11 +19,19 @@ How to use?
 ==============
 ##Installation with Composer
 Just add the line under `require` object in your `composer.json` file.
+If you have issues with Composer not finding the repo, then try adding the repositories entry so it knows where to look on Github
+
 ``` json
 {
-  "require": {
-    "kublermdk/yii2-phone-validator" : "~1.0.4"
-  }
+    "require": {
+        "kublermdk/yii2-phone-validator" : ">=1.0"
+    },
+    "repositories": [
+      {
+        "type": "git",
+        "url": "https://github.com/kublermdk/yii2-phone-validator"
+      }
+    ]
 }
 ```
 then run 
@@ -49,15 +62,15 @@ The `country` and `country_code` attributes are tried if `country` or `countryAt
 
 ``` php
   // All phones will be controlled according to Turkey and formatted to TR Phone Number
-  [['phone'], 'udokmeci\yii2PhoneValidator\PhoneValidator','country'=>'TR'],// 
+  [['phone'], 'kublermdk\yii2PhoneValidator\PhoneValidator','country'=>'TR'],// 
 
   //All phones will be controlled according to value of $model->country_code
-  [['phone'], 'udokmeci\yii2PhoneValidator\PhoneValidator','countryAttribute'=>'country_code'],
+  [['phone'], 'kublermdk\yii2PhoneValidator\PhoneValidator','countryAttribute'=>'country_code'],
 
   //All phones will be controlled according to value of $model->country_code
   //If model has not a country attribute then phone will not be validated
   //If phone is a valid one will be formatted for International Format. default behavior.
-  [['phone'], 'udokmeci\yii2PhoneValidator\PhoneValidator','countryAttribute'=>'country_code','strict'=>false,'format'=>true],  
+  [['phone'], 'kublermdk\yii2PhoneValidator\PhoneValidator','countryAttribute'=>'country_code','strict'=>false,'format'=>true],  
 
 ```
 
