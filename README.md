@@ -40,7 +40,7 @@ Now add following in to your `model` rules.
         return [
           [['name', 'country'], 'string', 'max' => 50],
           // add this line
-          [['phone'], 'udokmeci\yii2PhoneValidator\PhoneValidator'],
+          [['phone'], 'kublermdk\yii2PhoneValidator\PhoneValidator'],
         ];
     }
 ```

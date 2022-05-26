@@ -1,5 +1,5 @@
 {
-    "name": "udokmeci/yii2-phone-validator",
+    "name": "kublermdk/yii2-phone-validator",
     "type": "validator",
     "description": "Yii2 Phone validator wrapper on top of PhoneNumberUtil library also used by Android devices. This is a fork of https://github.com/udokmeci/yii2-phone-validator with an update to the giggsey/libphonenumber-for-php version",
     "keywords": ["phone number","phone number validator","yii2"],

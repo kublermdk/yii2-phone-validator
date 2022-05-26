@@ -1,6 +1,6 @@
 <?php
 
-namespace udokmeci\yii2PhoneValidator;
+namespace kublermdk\yii2PhoneValidator;
 
 use yii\validators\Validator;
 use libphonenumber\PhoneNumberUtil;
